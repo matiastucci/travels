@@ -52,8 +52,9 @@
 
 <template lang="pug">
   .map-container
-    .travel-info(v-if="selectedTravel")
-      p {{ selectedTravel.city }}, {{ selectedTravel.country }}
+    transition(name="fade")
+      .travel-info(v-if="selectedTravel")
+        p {{ selectedTravel.city }}, {{ selectedTravel.country }}
 
     .zoom-control
       i.icon.ion-ios-minus(@click="lessZoom()")
@@ -75,7 +76,7 @@
     color: #e6e7e9;
     width: 300px;
     height: 50px;
-    padding: 20px;
+    padding: 10px;
     z-index: 99999;
     left: 0;
     bottom: 0;
