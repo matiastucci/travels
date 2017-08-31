@@ -54,7 +54,7 @@
   .map-container
     transition(name="fade")
       .travel-info(v-if="selectedTravel")
-        p {{ selectedTravel.city }}, {{ selectedTravel.country }}
+        p {{ selectedTravel.city }}, {{ selectedTravel.country }} {{ selectedTravel.flag }}
 
     .zoom-control
       i.icon.ion-ios-minus(@click="lessZoom()")
