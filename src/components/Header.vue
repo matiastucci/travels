@@ -9,7 +9,8 @@
       return {
         currentPosition: travelsData.current,
         nextTravel: travelsData.next,
-        countriesCount: travelsHelper.countriesCount()
+        countriesCount: travelsHelper.countriesCount(),
+        citiesCount: travelsData.oldTravels.length
       }
     }
   }
@@ -22,7 +23,7 @@
         i.icon.ion-home
       a(href="https://twitter.com/TucciMatias" target="_blank")
         i.icon.ion-social-twitter
-      a(href="https://github.com/MatiasTucci" target="_blank")
+      a(href="https://github.com/MatiasTucci/travels" target="_blank")
         i.icon.ion-social-github
     .travel-info
       .current
@@ -32,7 +33,7 @@
         i.icon.ion-android-share
         p {{ nextTravel }}
     .statistics
-      p {{ countriesCount }} countries
+      p {{ countriesCount }} Countries - {{ citiesCount }} Cities
 </template>
 
 <style lang="scss">
