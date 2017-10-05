@@ -1,6 +1,6 @@
 {
-  "current": "Buenos Aires, ARG",
-  "next": "Budapest, HUN",
+  "current": "Budapest, HUN",
+  "next": "Prague, CZE",
   "oldTravels": [{
     "year": "2007",
     "city": "Santiago",
@@ -309,6 +309,14 @@
     "coordinates": {
       "lat": -40.7627426,
       "lng": -71.64179839999997
+    }
+  }, {
+    "city": "Budapest",
+    "country": "HUN",
+    "flag": "🇭🇺",
+    "coordinates": {
+      "lat": 47.497912,
+      "lng": 19.04023499999994
     }
   }]
 }
