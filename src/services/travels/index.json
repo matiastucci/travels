@@ -163,6 +163,15 @@
       "lat": 40.901975,
       "lng": 14.33264399999996
     }
+  },{
+    "year": "2016",
+    "city": "Pompeii",
+    "country": "ITA",
+    "flag": "🇮🇹",
+    "coordinates": {
+      "lat": 40.7466508,
+      "lng": 14.4761726
+    }
   }, {
     "year": "2016",
     "city": "Kuala Lumpur",
