@@ -7,6 +7,8 @@
 
     data () {
       return {
+        mapsLoaded: false,
+        interval: undefined,
         selectedTravel: undefined,
         travels: travelsData.oldTravels,
         map: {
@@ -23,7 +25,18 @@
       }
     },
 
+    created () {
+      this.interval = setInterval(this.checkIfMapsLoaded, 500)
+    },
+
     methods: {
+      checkIfMapsLoaded () {
+        if (window.google) {
+          this.mapsLoaded = true
+          clearInterval(this.interval)
+        }
+      },
+
       showTravelInfo (travel) {
         this.selectedTravel = travel
         // this.map.zoom = 5
@@ -45,13 +58,27 @@
       lessZoom () {
         if (this.map.zoom === 2) return
         this.map.zoom = this.map.zoom - 1
+      },
+
+      getMarkerIcon (index) {
+        return index === 0 ? {
+          path: window.google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          fillColor: '#e6e7e9',
+          fillOpacity: 1,
+          strokeWeight: 1
+        } : undefined
+      },
+
+      getMarkerAnimation (index) {
+        return index === 0 ? window.google.maps.Animation.BOUNCE : null
       }
     }
   }
 </script>
 
 <template lang="pug">
-  .map-container
+  .map-container(v-if="mapsLoaded")
     transition(name="fade")
       .travel-info(v-if="selectedTravel")
         p {{ selectedTravel.city }}, {{ selectedTravel.country }} {{ selectedTravel.flag }}
@@ -61,11 +88,11 @@
       i.icon.ion-ios-plus(@click="moreZoom()")
 
     gmap-map(:center="map.center", :zoom="map.zoom", style="width: 100%; height: 100%", @click="hideTravelInfo()", :options="map.options")
-      gmap-marker(:key="index", v-for="(m, index) in travels", :position="m.coordinates", :clickable="true", @click="showTravelInfo(m)")
+      gmap-marker(:key="index", v-for="(m, index) in travels", :icon="getMarkerIcon(index)", :animation="getMarkerAnimation(index)" :position="m.coordinates", :clickable="true", @click="showTravelInfo(m)")
 </template>
 
 <style lang="scss" scoped>
-  @import "../styles/main.scss";
+  @import "../styles/variables.scss";
 
   .travel-info {
     display: flex;

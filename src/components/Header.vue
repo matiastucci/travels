@@ -1,9 +1,12 @@
 <script>
   import travelsData from '@/services/travels/index.json'
   import travelsHelper from '@/services/travels/helper'
+  import travelsModal from '@/components/TravelsModal.vue'
 
   export default {
     name: 'header',
+
+    components: { travelsModal },
 
     data () {
       return {
@@ -12,12 +15,20 @@
         countriesCount: travelsHelper.countriesCount(),
         citiesCount: travelsData.oldTravels.length
       }
+    },
+
+    methods: {
+      showCountriesModal () {
+        this.$modal.show('travels-modal')
+      }
     }
   }
 </script>
 
 <template lang="pug">
   #header
+    travels-modal
+
     .social-icons
       a(href="https://tucci.me" target="_blank")
         i.icon.ion-home
@@ -33,11 +44,12 @@
         i.icon.ion-android-share
         p {{ nextTravel }}
     .statistics
-      p {{ countriesCount }} Countries - {{ citiesCount }} Cities
+      p(@click='showCountriesModal')
+        | {{ countriesCount }} Countries - {{ citiesCount }} Cities
 </template>
 
 <style lang="scss">
-  @import "../styles/main.scss";
+  @import "../styles/variables.scss";
 
   #header {
     display: flex;
@@ -106,6 +118,13 @@
 
     .statistics {
       justify-content: flex-end;
+      p {
+        transition: opacity .3s;
+        cursor: pointer;
+        &:hover {
+          opacity: .6;
+        }
+      }
     }
   }
 </style>
