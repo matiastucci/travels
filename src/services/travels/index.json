@@ -1,6 +1,6 @@
 {
-  "current": "Prague, CZE",
-  "next": "Athens, GRC",
+  "current": "Athens, GRC",
+  "next": "Bansko, BGR",
   "oldTravels": [{
     "year": "2007",
     "city": "Santiago",
@@ -334,6 +334,14 @@
     "coordinates": {
       "lat": 50.0596696,
       "lng": 14.4656239
+    }
+  }, {
+    "city": "Athens",
+    "country": "GRC",
+    "flag": "🇬🇷",
+    "coordinates": {
+      "lat": 37.9908997,
+      "lng": 23.7033199
     }
   }]
 }
