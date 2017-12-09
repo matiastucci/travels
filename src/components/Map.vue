@@ -9,9 +9,11 @@
       return {
         mapsLoaded: false,
         interval: undefined,
+        timeout: undefined,
         selectedTravel: undefined,
+        map: undefined,
         travels: travelsData.oldTravels,
-        map: {
+        mapOptions: {
           center: { lat: 0.0, lng: 0.0 },
           zoom: 3,
           options: {
@@ -21,6 +23,10 @@
             streetViewControl: false,
             zoomControl: false
           }
+        },
+        tooltipPos: {
+          left: 0,
+          bottom: 0
         }
       }
     },
@@ -33,31 +39,26 @@
       checkIfMapsLoaded () {
         if (window.google) {
           this.mapsLoaded = true
+          this.$nextTick(() => {
+            this.$refs.gmap.$mapCreated.then(map => {
+              this.map = map
+            })
+          })
           clearInterval(this.interval)
         }
       },
 
-      showTravelInfo (travel) {
-        this.selectedTravel = travel
-        // this.map.zoom = 5
-        // this.map.center.lat = travel.coordinates.lat
-        // this.map.center.lng = travel.coordinates.lng
-      },
-
-      hideTravelInfo () {
-        // this.map.zoom = 3
-        // this.map.center.lat = 0.0
-        // this.map.center.lng = 0.0
+      hideTooltip () {
         this.selectedTravel = undefined
       },
 
       moreZoom () {
-        this.map.zoom = this.map.zoom + 1
+        this.mapOptions.zoom = this.mapOptions.zoom + 1
       },
 
       lessZoom () {
-        if (this.map.zoom === 2) return
-        this.map.zoom = this.map.zoom - 1
+        if (this.mapOptions.zoom === 2) return
+        this.mapOptions.zoom = this.mapOptions.zoom - 1
       },
 
       getMarkerIcon (index) {
@@ -72,6 +73,26 @@
 
       getMarkerAnimation (index) {
         return index === 0 ? window.google.maps.Animation.BOUNCE : null
+      },
+
+      showTooltip (m) {
+        clearTimeout(this.timeout)
+        const latLng = new window.google.maps.LatLng(m.coordinates.lat, m.coordinates.lng)
+        const pos = this.fromLatLngToPoint(latLng)
+        this.tooltipPos.left = `${pos.x - 125}px`
+        this.tooltipPos.top = `${pos.y + 60}px`
+        this.selectedTravel = m
+        this.timeout = setTimeout(() => {
+          this.hideTooltip()
+        }, 1500)
+      },
+
+      fromLatLngToPoint (latLng) {
+        const topRight = this.map.getProjection().fromLatLngToPoint(this.map.getBounds().getNorthEast())
+        const bottomLeft = this.map.getProjection().fromLatLngToPoint(this.map.getBounds().getSouthWest())
+        const scale = Math.pow(2, this.map.getZoom())
+        const worldPoint = this.map.getProjection().fromLatLngToPoint(latLng)
+        return new window.google.maps.Point((worldPoint.x - bottomLeft.x) * scale, (worldPoint.y - topRight.y) * scale)
       }
     }
   }
@@ -80,15 +101,33 @@
 <template lang="pug">
   .map-container(v-if="mapsLoaded")
     transition(name="fade")
-      .travel-info(v-if="selectedTravel")
+      .travel-info(v-if="selectedTravel", :style='tooltipPos')
         p {{ selectedTravel.city }}, {{ selectedTravel.country }} {{ selectedTravel.flag }}
 
     .zoom-control
       i.icon.ion-ios-minus(@click="lessZoom()")
       i.icon.ion-ios-plus(@click="moreZoom()")
 
-    gmap-map(:center="map.center", :zoom="map.zoom", style="width: 100%; height: 100%", @click="hideTravelInfo()", :options="map.options")
-      gmap-marker(:key="index", v-for="(m, index) in travels", :icon="getMarkerIcon(index)", :animation="getMarkerAnimation(index)" :position="m.coordinates", :clickable="true", @click="showTravelInfo(m)")
+    gmap-map(
+      ref          = "gmap",
+      :center      = "mapOptions.center",
+      :zoom        = "mapOptions.zoom",
+      style        = "width: 100%; height: 100%",
+      @drag        = "hideTooltip()",
+      @click       = "hideTooltip()",
+      @zoomChanged = "hideTooltip()",
+      :options     = "mapOptions.options"
+    )
+      gmap-marker(
+        :key       = "index",
+        @mouseover = 'showTooltip(m)',
+        v-for      = "(m, index) in travels",
+        :icon      = "getMarkerIcon(index)",
+        :animation = "getMarkerAnimation(index)"
+        :position  = "m.coordinates",
+        :clickable = "true",
+        @click     = "showTooltip(m)"
+      )
 </template>
 
 <style lang="scss" scoped>
@@ -101,12 +140,11 @@
     position: absolute;
     background-color: $primary-dark;
     color: #e6e7e9;
-    width: 300px;
+    width: 250px;
     height: 50px;
     padding: 10px;
     z-index: 99999;
-    left: 0;
-    bottom: 0;
+    box-sizing: border-box;
     -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
