@@ -1,6 +1,6 @@
 {
-  "current": "Athens, GRC",
-  "next": "Bansko, BGR",
+  "current": "Bansko, BGR",
+  "next": "Barcelona, ESP",
   "oldTravels": [{
     "year": "2007",
     "city": "Santiago",
@@ -342,6 +342,14 @@
     "coordinates": {
       "lat": 37.9908997,
       "lng": 23.7033199
+    }
+  }, {
+    "city": "Bansko",
+    "country": "BGR",
+    "flag": "🇧🇬",
+    "coordinates": {
+      "lat": 41.8389995,
+      "lng": 23.4835627
     }
   }]
 }
