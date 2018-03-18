@@ -75,6 +75,10 @@
         return index === 0 ? window.google.maps.Animation.BOUNCE : null
       },
 
+      getMarkerZIndex (index) {
+        return index === 0 ? 99999 : 90
+      },
+
       showTooltip (m) {
         clearTimeout(this.timeout)
         const latLng = new window.google.maps.LatLng(m.coordinates.lat, m.coordinates.lng)
@@ -126,6 +130,7 @@
         :animation = "getMarkerAnimation(index)"
         :position  = "m.coordinates",
         :clickable = "true",
+        :zIndex    = "getMarkerZIndex(index)"
         @click     = "showTooltip(m)"
       )
 </template>
