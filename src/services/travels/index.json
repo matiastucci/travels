@@ -344,6 +344,54 @@
       "lng": 23.7033199
     }
   }, {
+    "city": "Jerusalem",
+    "country": "ISR",
+    "flag": "🇮🇱",
+    "coordinates": {
+      "lat": 31.7964453,
+      "lng": 35.1053188
+    }
+  }, {
+    "city": "Tel Aviv",
+    "country": "ISR",
+    "flag": "🇮🇱",
+    "coordinates": {
+      "lat": 32.109487,
+      "lng": 34.7390367
+    }
+  }, {
+    "city": "Bethlehem",
+    "country": "ISR",
+    "flag": "🇮🇱",
+    "coordinates": {
+      "lat": 31.7053996,
+      "lng": 35.1936877
+    }
+  }, {
+    "city": "Amman",
+    "country": "JOR",
+    "flag": "🇯🇴",
+    "coordinates": {
+      "lat": 31.8360368,
+      "lng": 35.6674417
+    }
+  }, {
+    "city": "Jerash",
+    "country": "JOR",
+    "flag": "🇯🇴",
+    "coordinates": {
+      "lat": 32.2701107,
+      "lng": 35.8244375
+    }
+  }, {
+    "city": "Sofia",
+    "country": "BGR",
+    "flag": "🇧🇬",
+    "coordinates": {
+      "lat": 42.6390604,
+      "lng": 23.1838628
+    }
+  }, {
     "city": "Bansko",
     "country": "BGR",
     "flag": "🇧🇬",
