@@ -1,5 +1,5 @@
 {
-  "current": "Bansko, BGR",
+  "current": "Brussels, BEL",
   "next": "Barcelona, ESP",
   "oldTravels": [{
     "year": "2007",
@@ -398,6 +398,14 @@
     "coordinates": {
       "lat": 41.8389995,
       "lng": 23.4835627
+    }
+  }, {
+    "city": "Brussels",
+    "country": "BEL",
+    "flag": "🇧🇪",
+    "coordinates": {
+      "lat": 50.8387874,
+      "lng": 4.2933653
     }
   }]
 }
