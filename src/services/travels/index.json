@@ -1,6 +1,6 @@
 {
-  "current": "Brussels, BEL",
-  "next": "Barcelona, ESP",
+  "current": "Barcelona, ESP",
+  "next": "Buenos Aires, ARG",
   "oldTravels": [{
     "year": "2007",
     "city": "Santiago",
@@ -406,6 +406,22 @@
     "coordinates": {
       "lat": 50.8387874,
       "lng": 4.2933653
+    }
+  }, {
+    "city": "Berlin",
+    "country": "DEU",
+    "flag": "🇩🇪",
+    "coordinates": {
+      "lat": 52.5069312,
+      "lng": 13.1445531
+    }
+  }, {
+    "city": "Barcelona",
+    "country": "ESP",
+    "flag": "🇪🇸",
+    "coordinates": {
+      "lat": 41.3948976,
+      "lng": 2.0787279
     }
   }]
 }
