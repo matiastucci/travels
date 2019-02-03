@@ -1,6 +1,6 @@
 {
-  "current": "Barcelona, ESP",
-  "next": "Buenos Aires, ARG",
+  "current": "Koh Tao, THA",
+  "next": "Chiang Mai, THA",
   "oldTravels": [{
     "year": "2007",
     "city": "Santiago",
@@ -192,7 +192,7 @@
     }
   }, {
     "year": "2016",
-    "city": "Ko Samui",
+    "city": "Koh Samui",
     "country": "THA",
     "flag": "🇹🇭",
     "coordinates": {
@@ -201,7 +201,7 @@
     }
   }, {
     "year": "2016",
-    "city": "Ko Tao",
+    "city": "Koh Tao",
     "country": "THA",
     "flag": "🇹🇭",
     "coordinates": {
