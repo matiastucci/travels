@@ -200,15 +200,6 @@
       "lng": 100.01359290000005
     }
   }, {
-    "year": "2016",
-    "city": "Koh Tao",
-    "country": "THA",
-    "flag": "🇹🇭",
-    "coordinates": {
-      "lat": 10.0993587,
-      "lng": 99.83004840000001
-    }
-  }, {
     "year": "2017",
     "city": "New York",
     "country": "USA",
@@ -422,6 +413,15 @@
     "coordinates": {
       "lat": 41.3948976,
       "lng": 2.0787279
+    }
+  }, {
+    "year": "2016",
+    "city": "Koh Tao",
+    "country": "THA",
+    "flag": "🇹🇭",
+    "coordinates": {
+      "lat": 10.0993587,
+      "lng": 99.83004840000001
     }
   }]
 }
