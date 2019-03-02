@@ -1,6 +1,6 @@
 {
-  "current": "Koh Tao, THA",
-  "next": "Chiang Mai, THA",
+  "current": "Tokyo, JPN",
+  "next": "Bali, IDN",
   "oldTravels": [{
     "year": "2007",
     "city": "Santiago",
@@ -415,13 +415,67 @@
       "lng": 2.0787279
     }
   }, {
-    "year": "2016",
+    "year": "2019",
     "city": "Koh Tao",
     "country": "THA",
     "flag": "🇹🇭",
     "coordinates": {
       "lat": 10.0993587,
       "lng": 99.83004840000001
+    }
+  }, {
+    "year": "2019",
+    "city": "Siem Reap",
+    "country": "KHM",
+    "flag": "🇰🇭",
+    "coordinates": {
+      "lat": 13.3403095,
+      "lng": 103.7228669
+    }
+  }, {
+    "year": "2019",
+    "city": "Chiang Mai",
+    "country": "THA",
+    "flag": "🇹🇭",
+    "coordinates": {
+      "lat": 18.771739,
+      "lng": 98.8864365
+    }
+  }, {
+    "year": "2019",
+    "city": "Kyoto",
+    "country": "JPN",
+    "flag": "🇯🇵",
+    "coordinates": {
+      "lat": 35.0060799,
+      "lng": 135.6909097
+    }
+  }, {
+    "year": "2019",
+    "city": "Nara",
+    "country": "JPN",
+    "flag": "🇯🇵",
+    "coordinates": {
+      "lat": 34.6868987,
+      "lng": 135.7913404
+    }
+  }, {
+    "year": "2019",
+    "city": "Osaka",
+    "country": "JPN",
+    "flag": "🇯🇵",
+    "coordinates": {
+      "lat": 34.678395,
+      "lng": 135.4601305
+    }
+  }, {
+    "year": "2019",
+    "city": "Tokyo",
+    "country": "JPN",
+    "flag": "🇯🇵",
+    "coordinates": {
+      "lat": 35.6691074,
+      "lng": 139.6012951
     }
   }]
 }
