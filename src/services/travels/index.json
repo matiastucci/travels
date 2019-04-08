@@ -1,6 +1,6 @@
 {
-  "current": "Tokyo, JPN",
-  "next": "Bali, IDN",
+  "current": "Bali, IDN",
+  "next": "Hanoi, VN",
   "oldTravels": [{
     "year": "2007",
     "city": "Santiago",
@@ -476,6 +476,42 @@
     "coordinates": {
       "lat": 35.6691074,
       "lng": 139.6012951
+    }
+  }, {
+    "year": "2019",
+    "city": "Yuzawa",
+    "country": "JPN",
+    "flag": "🇯🇵",
+    "coordinates": {
+      "lat": 36.8506063,
+      "lng": 138.6604827
+    }
+  }, {
+    "year": "2019",
+    "city": "Yuzawa",
+    "country": "JPN",
+    "flag": "🇯🇵",
+    "coordinates": {
+      "lat": 36.8506063,
+      "lng": 138.6604827
+    }
+  }, {
+    "year": "2019",
+    "city": "Fujikawaguchiko",
+    "country": "JPN",
+    "flag": "🇯🇵",
+    "coordinates": {
+      "lat": 35.4828679,
+      "lng": 138.626079
+    }
+  }, {
+    "year": "2019",
+    "city": "Bali",
+    "country": "IDN",
+    "flag": "🇮🇩",
+    "coordinates": {
+      "lat": -8.4543386,
+      "lng": 114.5110424
     }
   }]
 }
