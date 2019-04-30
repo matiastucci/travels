@@ -506,21 +506,21 @@
     }
   }, {
     "year": "2019",
-    "city": "Bali",
-    "country": "IDN",
-    "flag": "🇮🇩",
-    "coordinates": {
-      "lat": -8.4543386,
-      "lng": 114.5110424
-    }
-  }, {
-    "year": "2019",
     "city": "Singapore",
     "country": "SGP",
     "flag": "🇸🇬",
     "coordinates": {
       "lat": 1.3139843,
       "lng": 103.5640535
+    }
+  }, {
+    "year": "2019",
+    "city": "Bali",
+    "country": "IDN",
+    "flag": "🇮🇩",
+    "coordinates": {
+      "lat": -8.4543386,
+      "lng": 114.5110424
     }
   }]
 }
