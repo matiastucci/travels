@@ -522,5 +522,68 @@
       "lat": -8.4543386,
       "lng": 114.5110424
     }
+  },{
+    "year": "2019",
+    "city": "Los Gatos",
+    "country": "USA",
+    "flag": "🇺🇸",
+    "coordinates": {
+      "lat": 37.2334066,
+      "lng": -121.9865547
+    }
+  }, {
+    "year": "2019",
+    "city": "Chicago",
+    "country": "USA",
+    "flag": "🇺🇸",
+    "coordinates": {
+      "lat": 41.8339042,
+      "lng": -88.012153
+    }
+  }, {
+    "year": "2019",
+    "city": "Baltimore",
+    "country": "USA",
+    "flag": "🇺🇸",
+    "coordinates": {
+      "lat": 39.2848183,
+      "lng": -76.6905262
+    }
+  }, {
+    "year": "2019",
+    "city": "Washington DC",
+    "country": "USA",
+    "flag": "🇺🇸",
+    "coordinates": {
+      "lat": 38.89378,
+      "lng": -77.1546615
+    }
+  }, {
+    "year": "2019",
+    "city": "Nusa Lembongan",
+    "country": "IDN",
+    "flag": "🇮🇩",
+    "coordinates": {
+      "lat": -8.7091787,
+      "lng": 115.4061138
+    }
+  }, {
+    "year": "2019",
+    "city": "Nusa Ceningan",
+    "country": "IDN",
+    "flag": "🇮🇩",
+    "coordinates": {
+      "lat": -8.6998612,
+      "lng": 115.4426173
+    }
+  }, {
+    "year": "2019",
+    "city": "Nusa Penida",
+    "country": "IDN",
+    "flag": "🇮🇩",
+    "coordinates": {
+      "lat": -8.7453969,
+      "lng": 115.4675997
+    }
   }]
 }
