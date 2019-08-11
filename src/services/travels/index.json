@@ -1,6 +1,6 @@
 {
-  "current": "Bali, IDN",
-  "next": "Hanoi, VN",
+  "current": "Buenos Aires, ARG",
+  "next": "-",
   "oldTravels": [{
     "year": "2007",
     "city": "Santiago",
@@ -520,7 +520,7 @@
     "flag": "🇮🇩",
     "coordinates": {
       "lat": -8.4543386,
-      "lng": 114.5110424
+      "lng": 114.5110442
     }
   },{
     "year": "2019",
@@ -564,8 +564,8 @@
     "country": "IDN",
     "flag": "🇮🇩",
     "coordinates": {
-      "lat": -8.7091787,
-      "lng": 115.4061138
+      "lat": -8.6788087,
+      "lng": 115.4325504
     }
   }, {
     "year": "2019",
@@ -584,6 +584,15 @@
     "coordinates": {
       "lat": -8.7453969,
       "lng": 115.4675997
+    }
+  }, {
+    "year": "2019",
+    "city": "Buenos Aires",
+    "country": "ARG",
+    "flag": "🇦🇷",
+    "coordinates": {
+      "lat": -34.6156625,
+      "lng": -58.5033386
     }
   }]
 }
